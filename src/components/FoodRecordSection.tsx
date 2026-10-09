@@ -63,8 +63,8 @@ export default function FoodRecordSection({ foodId }: { foodId: string }) {
             records={data.stepwiseRecords}
             stage={stage}
             today={today}
-            onRecord={(stepIndex, result) =>
-              app.addStepwiseRecord({ stepwiseId: sw.id, stepIndex, date: today, result, memo: '' })
+            onRecord={(stepIndex, values) =>
+              app.addStepwiseRecord({ stepwiseId: sw.id, stepIndex, ...values })
             }
           />
         </>
@@ -86,6 +86,7 @@ export default function FoodRecordSection({ foodId }: { foodId: string }) {
         data={data}
         onUpdate={app.updateRecord}
         onDelete={app.deleteRecord}
+        onUpdateStepwise={app.updateStepwiseRecord}
         onDeleteStepwise={app.deleteStepwiseRecord}
       />
     </section>

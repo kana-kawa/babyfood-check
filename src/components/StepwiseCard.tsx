@@ -6,6 +6,7 @@ import { formatDate, formatDaysAgo } from '@/lib/format'
 import { stepwiseState } from '@/lib/stepwise'
 import { STAGE_LABELS, STAGE_MONTHS, type Stage, type StepwiseFood } from '@/types/food'
 import type { CheckResult, StepwiseRecord } from '@/types/record'
+import RecordForm, { type RecordValues } from './RecordForm'
 
 /** 卵・乳製品・小麦の段階の進み具合と、その場での記録（F-01b） */
 export default function StepwiseCard({
@@ -19,15 +20,15 @@ export default function StepwiseCard({
   records: StepwiseRecord[]
   stage: Stage | null
   today: string
-  onRecord: (stepIndex: number, result: CheckResult) => void
+  onRecord: (stepIndex: number, values: RecordValues) => void
 }) {
   const [justRecorded, setJustRecorded] = useState<CheckResult | null>(null)
   const state = stepwiseState(sw, records, stage, today)
   const total = sw.steps.length
 
-  const record = (stepIndex: number, result: CheckResult) => {
-    onRecord(stepIndex, result)
-    setJustRecorded(result)
+  const record = (stepIndex: number, values: RecordValues) => {
+    onRecord(stepIndex, values)
+    setJustRecorded(values.result)
   }
 
   const last =
@@ -78,7 +79,7 @@ export default function StepwiseCard({
           <p className="text-muted">
             医師と相談して同じ量（{sw.steps[state.stepIndex].label} {sw.steps[state.stepIndex].amount}）で再開したら記録してください。
           </p>
-          <RecordButtons onRecord={(result) => record(state.stepIndex, result)} />
+          <StepRecorder key={`${state.kind}-${state.stepIndex}`} onSubmit={(values) => record(state.stepIndex, values)} />
         </div>
       )}
 
@@ -100,7 +101,10 @@ export default function StepwiseCard({
               あと <span className="font-bold text-foreground">{state.daysUntilNext}日</span> あけてから進めましょう
             </p>
           ) : (
-            <RecordButtons onRecord={(result) => record(state.nextIndex, result)} />
+            <StepRecorder
+              key={`${state.kind}-${state.nextIndex}`}
+              onSubmit={(values) => record(state.nextIndex, values)}
+            />
           )}
         </div>
       )}
@@ -113,23 +117,30 @@ export default function StepwiseCard({
   )
 }
 
-function RecordButtons({ onRecord }: { onRecord: (result: CheckResult) => void }) {
+/** 「記録する」を押すと、日付・結果・メモの入力欄が開く */
+function StepRecorder({ onSubmit }: { onSubmit: (values: RecordValues) => void }) {
+  const [open, setOpen] = useState(false)
+  if (!open) {
+    return (
+      <button
+        type="button"
+        onClick={() => setOpen(true)}
+        className="h-11 w-full rounded-full bg-accent text-sm font-bold text-white"
+      >
+        このステップを記録する
+      </button>
+    )
+  }
   return (
-    <div className="grid grid-cols-2 gap-2">
-      <button
-        type="button"
-        onClick={() => onRecord('ok')}
-        className="h-11 rounded-full bg-ok-soft text-sm font-bold text-ok"
-      >
-        食べた（問題なし）
-      </button>
-      <button
-        type="button"
-        onClick={() => onRecord('reaction')}
-        className="h-11 rounded-full bg-danger-soft text-sm font-bold text-danger"
-      >
-        症状あり
-      </button>
+    <div className="rounded-xl border border-border p-3">
+      <RecordForm
+        submitLabel="記録する"
+        onSubmit={(values) => {
+          onSubmit(values)
+          setOpen(false)
+        }}
+        onCancel={() => setOpen(false)}
+      />
     </div>
   )
 }

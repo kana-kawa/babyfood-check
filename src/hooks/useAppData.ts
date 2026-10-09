@@ -76,6 +76,15 @@ export function useAppData() {
     [],
   )
 
+  const updateStepwiseRecord = useCallback(
+    (record: StepwiseRecord) =>
+      update((d) => ({
+        ...d,
+        stepwiseRecords: d.stepwiseRecords.map((r) => (r.id === record.id ? record : r)),
+      })),
+    [],
+  )
+
   const deleteStepwiseRecord = useCallback(
     (id: string) =>
       update((d) => ({ ...d, stepwiseRecords: d.stepwiseRecords.filter((r) => r.id !== id) })),
@@ -91,6 +100,7 @@ export function useAppData() {
     updateRecord,
     deleteRecord,
     addStepwiseRecord,
+    updateStepwiseRecord,
     deleteStepwiseRecord,
     acceptDisclaimer,
   }

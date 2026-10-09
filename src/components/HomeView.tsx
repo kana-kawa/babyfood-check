@@ -112,8 +112,8 @@ export default function HomeView() {
               records={data.stepwiseRecords}
               stage={stage}
               today={today}
-              onRecord={(stepIndex, result) =>
-                addStepwiseRecord({ stepwiseId: sw.id, stepIndex, date: today, result, memo: '' })
+              onRecord={(stepIndex, values) =>
+                addStepwiseRecord({ stepwiseId: sw.id, stepIndex, ...values })
               }
             />
           ))}

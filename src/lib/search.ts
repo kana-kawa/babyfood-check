@@ -9,9 +9,9 @@ export function normalize(text: string): string {
     .replace(/\s+/g, '')
 }
 
-/** 食材名（漢字など）と読み（ひらがな）の両方で部分一致検索する。空なら全件 */
+/** 食材名（漢字など）・読み（ひらがな）・別の呼び方で部分一致検索する。空なら全件 */
 export function searchFoods(foods: Food[], query: string): Food[] {
   const q = normalize(query)
   if (!q) return foods
-  return foods.filter((f) => normalize(f.name).includes(q) || normalize(f.kana).includes(q))
+  return foods.filter((f) => [f.name, f.kana, ...(f.aliases ?? [])].some((text) => normalize(text).includes(q)))
 }

@@ -57,6 +57,8 @@ export interface Food {
   name: string
   /** ひらがな読み（検索用） */
   kana: string
+  /** 別の呼び方（ひらがな・検索用）。例：卵黄 → たまご */
+  aliases?: string[]
   category: Category
   stage: Stage
   allergen: Allergen
@@ -73,6 +75,8 @@ export interface Food {
 export interface StepwiseStep {
   label: string
   amount: string
+  /** このステップを記録したとき「食べた」扱いになる食材の id */
+  foodId: string
   /** 次のステップに進むまでに空ける日数（最後のステップは 0） */
   minDaysBeforeNext: number
   /** このステップに進めるようになる時期（省略時は食材の時期） */

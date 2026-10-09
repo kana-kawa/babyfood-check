@@ -37,6 +37,13 @@ export function isStageAvailable(foodStage: Stage, currentStage: Stage | null): 
   return STAGES.indexOf(foodStage) <= STAGES.indexOf(currentStage)
 }
 
+/** from から to までの日数（YYYY-MM-DD 同士） */
+export function daysBetween(from: string, to: string): number {
+  const a = parseDate(from)
+  const b = parseDate(to)
+  return Math.round((Date.UTC(b.y, b.m - 1, b.d) - Date.UTC(a.y, a.m - 1, a.d)) / 86_400_000)
+}
+
 /** 端末の日付（今日）を YYYY-MM-DD で返す */
 export function todayString(now: Date = new Date()): string {
   const y = now.getFullYear()

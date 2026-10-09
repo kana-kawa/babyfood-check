@@ -17,6 +17,10 @@ describe('foods.json', () => {
     for (const f of foods) expect(f.kana, f.id).toMatch(/^[ぁ-ゖー]+$/)
   })
 
+  it('has hiragana-only aliases', () => {
+    for (const f of foods) for (const a of f.aliases ?? []) expect(a, f.id).toMatch(/^[ぁ-ゖー]+$/)
+  })
+
   it('uses only defined stage / category / allergen values', () => {
     for (const f of foods) {
       expect(STAGES, f.id).toContain(f.stage)
@@ -80,6 +84,14 @@ describe('stepwise.json', () => {
         const next = STAGES.indexOf(step.fromStage ?? s.stage)
         expect(next, s.id).toBeGreaterThanOrEqual(current)
         current = next
+      }
+    }
+  })
+
+  it('links every step to a food of the same stepwise group', () => {
+    for (const s of stepwiseFoods) {
+      for (const step of s.steps) {
+        expect(foods.find((f) => f.id === step.foodId)?.stepwiseId, `${s.id}: ${step.foodId}`).toBe(s.id)
       }
     }
   })

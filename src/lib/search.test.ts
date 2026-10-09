@@ -23,6 +23,13 @@ describe('searchFoods', () => {
     expect(names('ｷｬﾍﾞﾂ')).toContain('キャベツ')
   })
 
+  it('finds by other names (aliases)', () => {
+    expect(names('たまご')).toEqual(expect.arrayContaining(['卵黄', '全卵']))
+    expect(names('タマゴ')).toEqual(expect.arrayContaining(['卵黄', '全卵']))
+    expect(names('しゃけ')).toContain('鮭')
+    expect(names('パスタ')).toContain('スパゲッティ')
+  })
+
   it('matches partially', () => {
     const result = names('とり')
     expect(result).toContain('鶏ささみ')

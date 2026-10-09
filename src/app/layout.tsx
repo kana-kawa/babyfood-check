@@ -9,6 +9,8 @@ export const metadata: Metadata = {
     template: "%s | 離乳食チェック",
   },
   description: "離乳食のアレルギーチェックを、時期に合わせて順番に記録できるアプリ",
+  // iPhone でホーム画面に追加したときの設定
+  appleWebApp: { capable: true, title: "離乳食チェック", statusBarStyle: "default" },
 };
 
 export const viewport: Viewport = {

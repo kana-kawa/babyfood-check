@@ -1,5 +1,5 @@
-import ComingSoon from "@/components/ComingSoon";
+import HomeView from "@/components/HomeView";
 
 export default function Home() {
-  return <ComingSoon title="今日のおすすめ" />;
+  return <HomeView />;
 }

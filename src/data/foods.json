@@ -434,7 +434,7 @@
     "stage": "middle",
     "allergen": null,
     "priority": 16,
-    "tips": "赤身を茹でてほぐす。脂の多いトロは避ける。"
+    "tips": "赤身を茹でてほぐす。脂の多いトロは避ける。ツナ缶を使う場合は、原材料が「まぐろ（きはだ・びんなが）」の食塩不使用の水煮缶を選び、湯通ししてほぐす（原材料が「かつお」のツナ缶もあるので確認する）。"
   },
   {
     "id": "katsuo",
@@ -447,23 +447,13 @@
     "tips": "茹でてほぐす。"
   },
   {
-    "id": "tuna-can",
-    "name": "ツナ（水煮缶）",
-    "kana": "つな",
-    "category": "protein_fish",
-    "stage": "middle",
-    "allergen": null,
-    "priority": 18,
-    "tips": "食塩不使用の水煮缶を選び、湯通ししてほぐす。"
-  },
-  {
     "id": "cod",
     "name": "たら",
     "kana": "たら",
     "category": "protein_fish",
     "stage": "middle",
     "allergen": null,
-    "priority": 19,
+    "priority": 18,
     "tips": "生だらを茹でて皮と骨を除き、ほぐす（塩だらは避ける）。"
   },
   {
@@ -473,7 +463,7 @@
     "category": "other",
     "stage": "middle",
     "allergen": null,
-    "priority": 20,
+    "priority": 19,
     "tips": "おかゆなどにひとつまみ振る。風味づけに。"
   },
   {
@@ -483,7 +473,7 @@
     "category": "other",
     "stage": "middle",
     "allergen": null,
-    "priority": 21,
+    "priority": 20,
     "tips": "削り節からとっただしを使う。市販の顆粒だしは塩分が多いので避ける。"
   },
   {
@@ -493,7 +483,7 @@
     "category": "grain",
     "stage": "middle",
     "allergen": "recommended",
-    "priority": 22,
+    "priority": 21,
     "tips": "必ず加熱する。皮をむくときに手がかゆくなることがあるので、赤ちゃんの肌にも注意。",
     "firstTimeNote": "初めては1さじから。すぐ受診できる平日の午前中に与え、食後2時間ほどは口のまわり・皮ふ・機嫌の変化を見ましょう。"
   },
@@ -504,7 +494,7 @@
     "category": "vegetable_fruit",
     "stage": "middle",
     "allergen": "recommended",
-    "priority": 23,
+    "priority": 22,
     "tips": "皮をむいてすりおろし、最初は加熱する。",
     "firstTimeNote": "初めては1さじから。すぐ受診できる平日の午前中に与え、食後2時間ほどは口のまわり・皮ふ・機嫌の変化を見ましょう。"
   },
@@ -515,7 +505,7 @@
     "category": "protein_fish",
     "stage": "middle",
     "allergen": "recommended",
-    "priority": 24,
+    "priority": 23,
     "tips": "生鮭を茹でて皮と骨を除き、ほぐす（塩鮭は避ける）。",
     "firstTimeNote": "初めては1さじから。すぐ受診できる平日の午前中に与え、食後2時間ほどは口のまわり・皮ふ・機嫌の変化を見ましょう。"
   },
@@ -526,7 +516,7 @@
     "category": "protein_meat",
     "stage": "middle",
     "allergen": "recommended",
-    "priority": 25,
+    "priority": 24,
     "tips": "肉の最初の1品に。筋を取って茹で、細かくすりつぶしてとろみをつける。",
     "firstTimeNote": "初めては1さじから。すぐ受診できる平日の午前中に与え、食後2時間ほどは口のまわり・皮ふ・機嫌の変化を見ましょう。"
   },
@@ -537,7 +527,7 @@
     "category": "protein_bean",
     "stage": "middle",
     "allergen": "recommended",
-    "priority": 26,
+    "priority": 25,
     "tips": "おかゆなどに混ぜる。粉のままだとむせるので、必ず水分と混ぜる。",
     "firstTimeNote": "初めては1さじから。すぐ受診できる平日の午前中に与え、食後2時間ほどは口のまわり・皮ふ・機嫌の変化を見ましょう。"
   },
@@ -548,7 +538,7 @@
     "category": "protein_bean",
     "stage": "middle",
     "allergen": "recommended",
-    "priority": 27,
+    "priority": 26,
     "tips": "ひきわり納豆を湯通しして粘りを取る。たれは使わない。",
     "firstTimeNote": "初めては1さじから。すぐ受診できる平日の午前中に与え、食後2時間ほどは口のまわり・皮ふ・機嫌の変化を見ましょう。"
   },
@@ -559,7 +549,7 @@
     "category": "protein_bean",
     "stage": "middle",
     "allergen": "recommended",
-    "priority": 28,
+    "priority": 27,
     "tips": "乾いたまますりおろし、おかゆなどに混ぜて煮る。",
     "firstTimeNote": "初めては1さじから。すぐ受診できる平日の午前中に与え、食後2時間ほどは口のまわり・皮ふ・機嫌の変化を見ましょう。"
   },
@@ -570,7 +560,7 @@
     "category": "protein_dairy",
     "stage": "middle",
     "allergen": "specific",
-    "priority": 29,
+    "priority": 28,
     "stepwiseId": "dairy",
     "tips": "無糖のプレーンヨーグルトを使う。小さじ1から始め、段階的に増やす。",
     "firstTimeNote": "特定原材料でアレルギーが出やすい食材です。ごく少量（1さじ未満）から、すぐ受診できる平日の午前中に与え、食後2時間ほどは様子を見ましょう。"
@@ -582,7 +572,7 @@
     "category": "protein_dairy",
     "stage": "middle",
     "allergen": "specific",
-    "priority": 30,
+    "priority": 29,
     "stepwiseId": "dairy",
     "tips": "加熱してパンがゆなどの調理に使う。飲み物として与えるのは1歳から。",
     "firstTimeNote": "特定原材料でアレルギーが出やすい食材です。ごく少量（1さじ未満）から、すぐ受診できる平日の午前中に与え、食後2時間ほどは様子を見ましょう。"
@@ -594,7 +584,7 @@
     "category": "protein_egg",
     "stage": "middle",
     "allergen": "specific",
-    "priority": 31,
+    "priority": 30,
     "stepwiseId": "egg",
     "tips": "卵黄1個に慣れてから、固ゆでの全卵を少量から。半熟・生は避ける。",
     "firstTimeNote": "特定原材料でアレルギーが出やすい食材です。ごく少量（1さじ未満）から、すぐ受診できる平日の午前中に与え、食後2時間ほどは様子を見ましょう。"
@@ -606,7 +596,7 @@
     "category": "protein_dairy",
     "stage": "middle",
     "allergen": "specific",
-    "priority": 32,
+    "priority": 31,
     "tips": "塩分・脂肪の少ないカッテージチーズから。ヨーグルトに慣れてから与える。",
     "firstTimeNote": "特定原材料でアレルギーが出やすい食材です。ごく少量（1さじ未満）から、すぐ受診できる平日の午前中に与え、食後2時間ほどは様子を見ましょう。"
   },
@@ -617,7 +607,7 @@
     "category": "grain",
     "stage": "middle",
     "allergen": "specific",
-    "priority": 33,
+    "priority": 32,
     "tips": "塩分が多いので、やわらかく茹でてから水でよく洗う。うどんに慣れてから。",
     "firstTimeNote": "特定原材料でアレルギーが出やすい食材です。ごく少量（1さじ未満）から、すぐ受診できる平日の午前中に与え、食後2時間ほどは様子を見ましょう。"
   },
@@ -628,7 +618,7 @@
     "category": "grain",
     "stage": "middle",
     "allergen": "specific",
-    "priority": 34,
+    "priority": 33,
     "tips": "耳を除き、パンがゆにする。卵・乳を含む製品もあるので原材料を確認する。うどんに慣れてから。",
     "firstTimeNote": "特定原材料でアレルギーが出やすい食材です。ごく少量（1さじ未満）から、すぐ受診できる平日の午前中に与え、食後2時間ほどは様子を見ましょう。"
   },
@@ -639,7 +629,7 @@
     "category": "grain",
     "stage": "middle",
     "allergen": "specific",
-    "priority": 35,
+    "priority": 34,
     "tips": "すりおろしたり、水で戻して細かく刻み、煮る。うどんに慣れてから。",
     "firstTimeNote": "特定原材料でアレルギーが出やすい食材です。ごく少量（1さじ未満）から、すぐ受診できる平日の午前中に与え、食後2時間ほどは様子を見ましょう。"
   },
@@ -1066,13 +1056,57 @@
     "tips": "乳児ボツリヌス症の危険があるため、1歳未満には絶対に与えない。1歳を過ぎてから少量を。"
   },
   {
+    "id": "chikuwa",
+    "name": "ちくわ",
+    "kana": "ちくわ",
+    "category": "protein_fish",
+    "stage": "complete",
+    "allergen": null,
+    "priority": 11,
+    "tips": "塩分が多いので湯通しして、ごく細かく刻む。弾力があり、かみ切りにくい。",
+    "firstTimeNote": "加工品は製品によって卵・乳・小麦・大豆などが含まれます。原材料表示を確認し、含まれる食材を先に試しておきましょう。"
+  },
+  {
+    "id": "kamaboko",
+    "name": "かまぼこ",
+    "kana": "かまぼこ",
+    "category": "protein_fish",
+    "stage": "complete",
+    "allergen": null,
+    "priority": 12,
+    "tips": "塩分が多いので湯通しして、ごく細かく刻む。弾力があり、かみ切りにくい。",
+    "firstTimeNote": "加工品は製品によって卵・乳・小麦・大豆などが含まれます。原材料表示を確認し、含まれる食材を先に試しておきましょう。"
+  },
+  {
+    "id": "satsuma-age",
+    "name": "さつま揚げ",
+    "kana": "さつまあげ",
+    "category": "protein_fish",
+    "stage": "complete",
+    "allergen": null,
+    "priority": 13,
+    "tips": "熱湯で油抜き・塩抜きして、細かく刻む。",
+    "firstTimeNote": "加工品は製品によって卵・乳・小麦・大豆などが含まれます。原材料表示を確認し、含まれる食材を先に試しておきましょう。"
+  },
+  {
+    "id": "fish-sausage",
+    "name": "魚肉ソーセージ",
+    "kana": "ぎょにくそーせーじ",
+    "category": "protein_fish",
+    "stage": "complete",
+    "allergen": null,
+    "priority": 14,
+    "tips": "塩分が多いので湯通しして、細かく刻む。",
+    "firstTimeNote": "加工品は製品によって卵・乳・小麦・大豆などが含まれます。原材料表示を確認し、含まれる食材を先に試しておきましょう。"
+  },
+  {
     "id": "squid",
     "name": "いか",
     "kana": "いか",
     "category": "protein_fish",
     "stage": "complete",
     "allergen": "recommended",
-    "priority": 11,
+    "priority": 15,
     "tips": "かみ切りにくいので、加熱してごく細かく刻む。",
     "firstTimeNote": "初めては1さじから。すぐ受診できる平日の午前中に与え、食後2時間ほどは口のまわり・皮ふ・機嫌の変化を見ましょう。"
   },
@@ -1083,7 +1117,7 @@
     "category": "protein_meat",
     "stage": "complete",
     "allergen": "recommended",
-    "priority": 12,
+    "priority": 16,
     "tips": "豚肉・牛肉それぞれに慣れてから。中心までしっかり加熱する。",
     "firstTimeNote": "初めては1さじから。すぐ受診できる平日の午前中に与え、食後2時間ほどは口のまわり・皮ふ・機嫌の変化を見ましょう。"
   },
@@ -1094,7 +1128,7 @@
     "category": "protein_bean",
     "stage": "complete",
     "allergen": "recommended",
-    "priority": 13,
+    "priority": 17,
     "tips": "熱湯で油抜きして、中の白い部分から与える。",
     "firstTimeNote": "初めては1さじから。すぐ受診できる平日の午前中に与え、食後2時間ほどは口のまわり・皮ふ・機嫌の変化を見ましょう。"
   },
@@ -1105,9 +1139,42 @@
     "category": "protein_bean",
     "stage": "complete",
     "allergen": "recommended",
-    "priority": 14,
+    "priority": 18,
     "tips": "熱湯で油抜きして、細かく刻む。",
     "firstTimeNote": "初めては1さじから。すぐ受診できる平日の午前中に与え、食後2時間ほどは口のまわり・皮ふ・機嫌の変化を見ましょう。"
+  },
+  {
+    "id": "ham",
+    "name": "ハム",
+    "kana": "はむ",
+    "category": "protein_meat",
+    "stage": "complete",
+    "allergen": "recommended",
+    "priority": 19,
+    "tips": "塩分・脂肪が多いので湯通しして、細かく刻む。豚肉に慣れてから。",
+    "firstTimeNote": "初めては1さじから。すぐ受診できる平日の午前中に与え、食後2時間ほどは口のまわり・皮ふ・機嫌の変化を見ましょう。加工品は製品によって卵・乳・小麦・大豆などが含まれます。原材料表示を確認し、含まれる食材を先に試しておきましょう。"
+  },
+  {
+    "id": "sausage",
+    "name": "ソーセージ",
+    "kana": "そーせーじ",
+    "category": "protein_meat",
+    "stage": "complete",
+    "allergen": "recommended",
+    "priority": 20,
+    "tips": "塩分・脂肪が多いので湯通しして、細かく刻む。丸のまま・輪切りは窒息の危険があるので与えない。豚肉に慣れてから。",
+    "firstTimeNote": "初めては1さじから。すぐ受診できる平日の午前中に与え、食後2時間ほどは口のまわり・皮ふ・機嫌の変化を見ましょう。加工品は製品によって卵・乳・小麦・大豆などが含まれます。原材料表示を確認し、含まれる食材を先に試しておきましょう。"
+  },
+  {
+    "id": "bacon",
+    "name": "ベーコン",
+    "kana": "べーこん",
+    "category": "protein_meat",
+    "stage": "complete",
+    "allergen": "recommended",
+    "priority": 21,
+    "tips": "塩分・脂肪が特に多いので、湯通しして少量を細かく刻む。豚肉に慣れてから。",
+    "firstTimeNote": "初めては1さじから。すぐ受診できる平日の午前中に与え、食後2時間ほどは口のまわり・皮ふ・機嫌の変化を見ましょう。加工品は製品によって卵・乳・小麦・大豆などが含まれます。原材料表示を確認し、含まれる食材を先に試しておきましょう。"
   },
   {
     "id": "chinese-noodles",
@@ -1116,9 +1183,20 @@
     "category": "grain",
     "stage": "complete",
     "allergen": "specific",
-    "priority": 15,
+    "priority": 22,
     "tips": "やわらかく茹でて短く切る。卵を含む製品もあるので原材料を確認する。",
     "firstTimeNote": "特定原材料でアレルギーが出やすい食材です。ごく少量（1さじ未満）から、すぐ受診できる平日の午前中に与え、食後2時間ほどは様子を見ましょう。"
+  },
+  {
+    "id": "hanpen",
+    "name": "はんぺん",
+    "kana": "はんぺん",
+    "category": "protein_fish",
+    "stage": "complete",
+    "allergen": "specific",
+    "priority": 23,
+    "tips": "卵白を使った製品が多い。卵（全卵）に慣れてから、湯通しして細かく刻む。",
+    "firstTimeNote": "特定原材料でアレルギーが出やすい食材です。ごく少量（1さじ未満）から、すぐ受診できる平日の午前中に与え、食後2時間ほどは様子を見ましょう。加工品は製品によって卵・乳・小麦・大豆などが含まれます。原材料表示を確認し、含まれる食材を先に試しておきましょう。"
   },
   {
     "id": "shrimp",
@@ -1127,7 +1205,7 @@
     "category": "protein_fish",
     "stage": "complete",
     "allergen": "specific",
-    "priority": 16,
+    "priority": 24,
     "tips": "中心までしっかり加熱し、ごく少量を細かく刻んで与える。",
     "firstTimeNote": "特定原材料でアレルギーが出やすい食材です。ごく少量（1さじ未満）から、すぐ受診できる平日の午前中に与え、食後2時間ほどは様子を見ましょう。"
   },
@@ -1138,7 +1216,7 @@
     "category": "protein_fish",
     "stage": "complete",
     "allergen": "specific",
-    "priority": 17,
+    "priority": 25,
     "tips": "中心までしっかり加熱し、ごく少量をほぐして与える。",
     "firstTimeNote": "特定原材料でアレルギーが出やすい食材です。ごく少量（1さじ未満）から、すぐ受診できる平日の午前中に与え、食後2時間ほどは様子を見ましょう。"
   },
@@ -1149,7 +1227,7 @@
     "category": "grain",
     "stage": "complete",
     "allergen": "specific",
-    "priority": 18,
+    "priority": 26,
     "tips": "重いアレルギー症状が出やすい。ごく少量から、必ず平日の午前中に。茹で汁や同じ鍋の使い回しにも注意。",
     "firstTimeNote": "特定原材料でアレルギーが出やすい食材です。ごく少量（1さじ未満）から、すぐ受診できる平日の午前中に与え、食後2時間ほどは様子を見ましょう。"
   },
@@ -1160,7 +1238,7 @@
     "category": "other",
     "stage": "complete",
     "allergen": "specific",
-    "priority": 19,
+    "priority": 27,
     "tips": "無糖のピーナッツペーストや粉末をごく少量。粒のままは窒息の危険があるので与えない。",
     "firstTimeNote": "特定原材料でアレルギーが出やすい食材です。ごく少量（1さじ未満）から、すぐ受診できる平日の午前中に与え、食後2時間ほどは様子を見ましょう。"
   },
@@ -1171,7 +1249,7 @@
     "category": "other",
     "stage": "complete",
     "allergen": "specific",
-    "priority": 20,
+    "priority": 28,
     "tips": "粉末にしてごく少量。粒のままは窒息の危険があるので与えない。",
     "firstTimeNote": "特定原材料でアレルギーが出やすい食材です。ごく少量（1さじ未満）から、すぐ受診できる平日の午前中に与え、食後2時間ほどは様子を見ましょう。"
   }

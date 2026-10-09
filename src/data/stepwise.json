@@ -1,0 +1,47 @@
+[
+  {
+    "id": "egg",
+    "name": "卵",
+    "stage": "early",
+    "steps": [
+      { "label": "固ゆで卵黄", "amount": "耳かき1さじ", "minDaysBeforeNext": 3 },
+      { "label": "固ゆで卵黄", "amount": "小さじ1/4", "minDaysBeforeNext": 3 },
+      { "label": "固ゆで卵黄", "amount": "小さじ1/2", "minDaysBeforeNext": 3 },
+      { "label": "固ゆで卵黄", "amount": "小さじ1", "minDaysBeforeNext": 3 },
+      { "label": "固ゆで卵黄", "amount": "1個分", "minDaysBeforeNext": 3 },
+      { "label": "固ゆで全卵", "amount": "1/8個", "minDaysBeforeNext": 3, "fromStage": "middle" },
+      { "label": "固ゆで全卵", "amount": "1/4個", "minDaysBeforeNext": 3, "fromStage": "middle" },
+      { "label": "全卵", "amount": "1/3個（中期の目安）", "minDaysBeforeNext": 3, "fromStage": "middle" },
+      { "label": "全卵", "amount": "1/2個（後期の目安）", "minDaysBeforeNext": 3, "fromStage": "late" },
+      { "label": "全卵", "amount": "1/2〜2/3個（完了期の目安）", "minDaysBeforeNext": 0, "fromStage": "complete" }
+    ]
+  },
+  {
+    "id": "dairy",
+    "name": "乳製品",
+    "stage": "middle",
+    "steps": [
+      { "label": "プレーンヨーグルト", "amount": "小さじ1", "minDaysBeforeNext": 3 },
+      { "label": "プレーンヨーグルト", "amount": "小さじ2", "minDaysBeforeNext": 3 },
+      { "label": "プレーンヨーグルト", "amount": "大さじ1", "minDaysBeforeNext": 3 },
+      { "label": "プレーンヨーグルト", "amount": "大さじ2", "minDaysBeforeNext": 3 },
+      { "label": "牛乳（加熱して調理に使う）", "amount": "大さじ1", "minDaysBeforeNext": 3 },
+      { "label": "乳製品", "amount": "50〜70g（中期の目安）", "minDaysBeforeNext": 3 },
+      { "label": "乳製品", "amount": "80g（後期の目安）", "minDaysBeforeNext": 3, "fromStage": "late" },
+      { "label": "牛乳を飲み物として", "amount": "少量から（1歳から）", "minDaysBeforeNext": 0, "fromStage": "complete" }
+    ]
+  },
+  {
+    "id": "wheat",
+    "name": "小麦",
+    "stage": "early",
+    "steps": [
+      { "label": "うどん（すりつぶし）", "amount": "小さじ1", "minDaysBeforeNext": 3 },
+      { "label": "うどん（すりつぶし）", "amount": "小さじ2", "minDaysBeforeNext": 3 },
+      { "label": "うどん（すりつぶし）", "amount": "大さじ1", "minDaysBeforeNext": 3 },
+      { "label": "うどん（すりつぶし）", "amount": "大さじ2", "minDaysBeforeNext": 3 },
+      { "label": "うどん（刻む）", "amount": "1/4玉（中期の目安）", "minDaysBeforeNext": 3, "fromStage": "middle" },
+      { "label": "うどん・パンなど", "amount": "1食分（後期以降はその時期の目安量）", "minDaysBeforeNext": 0, "fromStage": "late" }
+    ]
+  }
+]

@@ -51,3 +51,12 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
 }
+
+/* iPhone の Safari は 16px 未満の入力欄をタップすると画面を拡大し、そのまま戻らないため 16px にそろえる */
+@layer base {
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}

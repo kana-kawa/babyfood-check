@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 離乳食チェック
 
-## Getting Started
+赤ちゃんが食べた食材を記録して、アレルギーのチェック漏れを防ぐための Web アプリです。
+月齢に合わせて「次に試す食材」を提案するので、離乳食で何をあげればいいか迷わずに進められます。
+スマートフォンのブラウザで、インストールもログインもせずに使えます。
 
-First, run the development server:
+**公開URL**: https://babyfood-check.vercel.app
+
+> 個人で企画から公開まで行ったポートフォリオです。食材の情報は一般的な目安であり、医師の診断や医療アドバイスの代わりにはなりません。
+
+## 作った背景
+
+離乳食では、アレルギーが出ないか確かめるために、新しい食材を1日1種類ずつ試していきます。
+「どの順番で試せばいいか」「どれをもう試したか」を紙やメモで管理するのは大変なので、アプリ1つで完結できるようにしました。
+
+## 主な機能
+
+- **今日のおすすめ（トップページ）**
+  - 赤ちゃんの月齢から今の時期（初期／中期／後期／完了期）を判断し、まだ試していない食材から候補を2つ提案する
+  - 卵・乳製品・小麦は、少しずつ量を増やす段階を別に表示する（今どの段階か、前回から何日たったか、次はあと何日後か）
+  - 時期ごとに、何品目試したかを進み具合のバーで表示する
+- **食材一覧・検索**
+  - 120品目の食材を、時期とカテゴリで絞り込める
+  - ひらがな・カタカナ・漢字のどれでも検索できる（「たまご」で卵黄・全卵も見つかる）
+  - アレルギーに注意が必要な食材（特定原材料など）にマークを付けて表示する
+- **食材の詳細と記録**
+  - 食べられる時期、与え方のポイント、注意点を表示する
+  - 「食べた（問題なし）」「症状あり」を、日付とメモ付きで記録できる
+  - 記録の履歴を見て、あとから編集・削除できる
+- **プロフィール**
+  - 赤ちゃんのニックネームと生年月日を登録すると、月齢を自動で計算する
+- **症状が出たときの対応マニュアル**
+  - 受診の目安と、#8000（子ども医療電話相談）・119 への案内をすぐ見られる
+- **データの保存**
+  - 記録はスマートフォンの中（localStorage）だけに保存し、サーバーには送らない
+  - スマートフォンのホーム画面に追加して、アプリのように開ける
+
+## 開発の進め方
+
+1. 要件定義書を作成し、作る機能と作らない機能（レシピ提案・家族での共有などは次の段階）を決めた
+2. 機能を段階に分けて計画し、1段階ずつ実装した
+3. 食材データの入力ミスや、月齢計算・おすすめのロジックを自動テストで確認した（テスト67件）
+4. Vercel で公開し、iPhone の実機で確認して、入力時に画面が拡大されてしまう問題を修正した
+
+## 技術スタック
+
+| 分類 | 使用技術 |
+|---|---|
+| フレームワーク | Next.js 16（App Router） |
+| UI | React 19 |
+| 言語 | TypeScript 5 |
+| スタイル | Tailwind CSS v4 |
+| データ保存 | localStorage（サーバー・データベースなし） |
+| テスト | Vitest |
+| ホスティング | Vercel |
+
+## 開発環境で動かす
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000 で起動
+npm test         # テストを実行
+npm run lint     # ESLint
+npm run build    # 本番用にビルド
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ドキュメント
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [要件定義書](docs/要件定義書.md) — 背景・目的、ユーザーストーリー、機能要件など
+- [食材一覧](docs/食材一覧_確認用.md) — 収録している120品目と、時期・与え方のポイント
